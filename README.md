@@ -80,36 +80,36 @@ Description of model variables
 
 temp
 ----
-long_name: temperature
-standard_name: sea_water_conservative_temperature
-units: degC
+long_name: temperature   
+standard_name: sea_water_conservative_temperature   
+units: degC   
 
 salt
 ----
-long_name: salinity
-standard_name: sea_water_reference_salinity
-units: g kg-1
+long_name: salinity   
+standard_name: sea_water_reference_salinity    
+units: g kg-1   
 
 nitrogen
 --------
-long_name: Dissolved Organic N Concentration
-standard_name: mole_concentration_of_organic_detritus_expressed_as_nitrogen_in_sea_water
-units: mmol m-3
+long_name: Dissolved Organic N Concentration    
+standard_name: mole_concentration_of_organic_detritus_expressed_as_nitrogen_in_sea_water    
+units: mmol m-3   
 
 diatoms
 -------
-long_name: Diatoms Concentration
-standard_name: mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water
-units: mmol m-3
+long_name: Diatoms Concentration    
+standard_name: mole_concentration_of_diatoms_expressed_as_nitrogen_in_sea_water   
+units: mmol m-3   
 
 u velocity
 ----------
-long_name: ocean current along x-axis
-standard_name: sea_water_x_velocity
-units: m/s
+long_name: ocean current along x-axis    
+standard_name: sea_water_x_velocity    
+units: m/s    
 
 v velocity
 ----------
-long_name: ocean current along y-axis
-standard_name: sea_water_y_velocity
-units: m/s
+long_name: ocean current along y-axis    
+standard_name: sea_water_y_velocity    
+units: m/s   
