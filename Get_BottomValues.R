@@ -103,4 +103,26 @@ for( var in vars ){
 }
 
 
+#---------------------------------------------------------------------------------#
+# get unit of each variable
+
+#require
+require(ncdf4)
+
+
+for( var in vars ){
+  
+  # list files
+  file.list <- list.files(path = paste0("Data/Input/",var), pattern = "*.nc$", full.names = T )
+
+  # open nc
+  nc <- nc_open(filename=file.list[1])
+  
+  # print
+  print(nc)
+  nc_close(nc)
+  
+  
+}
+
 

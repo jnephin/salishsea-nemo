@@ -87,5 +87,38 @@ for ( var in names(s.list) ){
 
 
 
+#------------------------------------------------------------------------------------#
+# load seasonal means data
+load("Data/Output/ave/daily.minmax.RData" ) # s.list
+
+for ( var in names(s.list) ){
+  for ( s in c("min","max") ){
+    
+    # bind together x,y,var
+    dat <- data.frame( long,lat, var=c(s.list[[var]][[s]]) )
+    
+    # remove NA records
+    dat <- dat[!is.na(dat$var),]
+    
+    # rename var
+    varname <-  paste(var, s, sep = "_")
+    names(dat)[3] <- varname
+    
+    # convert to sp
+    spdat <- dat
+    coordinates(spdat) <- ~long+lat
+    proj4string(spdat) <- CRS(latlon)
+    spdat <- spTransform(spdat, bcalbers)
+    spplot(spdat)
+    
+    # save
+    writeOGR(spdat,dsn="Data/Output/Shapefiles",layer=varname,
+             driver = "ESRI Shapefile", overwrite_layer = TRUE)
+    
+  }
+}
+
+
+
 
 
